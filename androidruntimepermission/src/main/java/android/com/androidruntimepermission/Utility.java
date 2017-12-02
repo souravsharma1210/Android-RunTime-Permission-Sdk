@@ -20,9 +20,9 @@ class Utility {
         SharedPreferences sp = getSharedPref(mContext);
         SharedPreferences.Editor editor = sp.edit();
         String[] var4 = permissionArray;
-        int var5 = permissionArray.length;
+        int i = permissionArray.length;
 
-        for(int var6 = 0; var6 < var5; ++var6) {
+        for(int var6 = 0; var6 < i; ++var6) {
             String permission = var4[var6];
             editor.putBoolean(permission, true);
         }
