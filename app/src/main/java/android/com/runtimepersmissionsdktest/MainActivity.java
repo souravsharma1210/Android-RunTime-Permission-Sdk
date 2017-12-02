@@ -27,5 +27,6 @@ public class MainActivity extends AppCompatActivity {
                                            String permissions[], int[] grantResults) {
         RuntimePermission.onRequestPermissionsResult(this,REQUEST_CODE, permissions,grantResults);
     }
+
 }
 
