@@ -21,5 +21,10 @@ public class MainActivity extends AppCompatActivity {
             }
         }, Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.CAMERA);
     }
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        RuntimePermission.onRequestPermissionsResult(this,1002, permissions,grantResults);
+    }
 }
-///////////////
+
