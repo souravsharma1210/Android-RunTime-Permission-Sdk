@@ -9,12 +9,13 @@ import android.widget.Toast;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+    private static final int REQUEST_CODE=1002;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RuntimePermission.requestCriticalPermission(this,1002, new OnPermissionGiven() {
+        RuntimePermission.requestCriticalPermission(this,REQUEST_CODE, new OnPermissionGiven() {
+
             @Override
             public void onPermissionReceived(List<String> list, List<String> list1, List<String> list2) {
                 Toast.makeText(MainActivity.this,"Nice Message",Toast.LENGTH_SHORT).show();
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
-        RuntimePermission.onRequestPermissionsResult(this,1002, permissions,grantResults);
+        RuntimePermission.onRequestPermissionsResult(this,REQUEST_CODE, permissions,grantResults);
     }
 }
 
