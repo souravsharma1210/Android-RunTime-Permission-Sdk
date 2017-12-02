@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by sourav sharma on 29-11-2017.
  */
-
+//callback interface
 public interface OnPermissionGiven {
     void onPermissionReceived(List<String> var1, List<String> var2, List<String> var3);
 }
